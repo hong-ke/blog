@@ -39,5 +39,10 @@
     <delete id="delete" parameterType="Long">
         delete from t_type where id=#{id}
     </delete>
+
+    <select id="findTop" parameterType="Integer" resultType="com.hk.blog.vo.TypeTopVO">
+        select type_id as id,typename,count(type_id) as size from t_blog  join t_type on t_blog.type_id=t_type.id
+        GROUP BY type_id limit #{high}
+    </select>
 </mapper>
 

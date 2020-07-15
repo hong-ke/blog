@@ -3,6 +3,7 @@ package com.hk.blog.service;
 
 
 import com.hk.blog.entity.Tag;
+import com.hk.blog.vo.TagTopVO;
 
 import java.util.List;
 
@@ -23,4 +24,6 @@ public interface TagService {
     Integer findTotals();
 
     Tag getOneByName(String tagname);
+
+    List<TagTopVO> findTop();
 }

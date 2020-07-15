@@ -13,7 +13,7 @@
             <if test="typeId != null and typeId != ''">
                 AND type_id=#{typeId}
             </if>
-            <if test="recommend != null and recommend != ''">
+            <if test="recommend != false">
                 AND recommend=#{recommend}
             </if>
         </where>
@@ -24,6 +24,10 @@
         select * from t_blog where id=#{id}
     </select>
 
+    <select id="findTop" parameterType="Integer" resultType="com.hk.blog.entity.Blog">
+        select * from t_blog where recommend=1 order by update_time desc limit #{high}
+    </select>
+
     <!--查询一条按typename-->
 <!--    <select id="getOneByName" parameterType="String" resultType="com.hk.blog.entity.Blog">-->
 <!--        select * from t_blog where tagname=#{tagname}-->
@@ -31,7 +35,12 @@
 
     <!--分页查询-->
     <select id="findByPage" resultType="com.hk.blog.entity.Blog">
-        select * from t_blog order by id limit #{start},#{rows}
+        select * from t_blog order by id desc limit #{start},#{rows}
+    </select>
+
+    <!--quanjusousuo -->
+    <select id="findByQuery" parameterType="String" resultType="com.hk.blog.entity.Blog">
+        select * from t_blog where title like concat('%',#{query},'%') or content like concat('%',#{query},'%')
     </select>
 
     <!--查询总数-->

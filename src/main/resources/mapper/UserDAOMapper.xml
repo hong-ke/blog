@@ -8,5 +8,9 @@
         select * from t_user where username = #{username}
     </select>
 
+    <select id="findByUserId" parameterType="Long" resultType="com.hk.blog.entity.User">
+        select * from t_user where id = #{id}
+    </select>
+
 </mapper>
 

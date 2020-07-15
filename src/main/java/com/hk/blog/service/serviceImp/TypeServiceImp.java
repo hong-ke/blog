@@ -3,6 +3,7 @@ package com.hk.blog.service.serviceImp;
 import com.hk.blog.dao.TypeDAO;
 import com.hk.blog.entity.Type;
 import com.hk.blog.service.TypeService;
+import com.hk.blog.vo.TypeTopVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,5 +53,14 @@ public class TypeServiceImp implements TypeService {
     @Override
     public Type getOneByName(String typename) {
         return typeDAO.getOneByName(typename);
+    }
+
+    /**
+     * 首页获取博客前N标签
+     * @return
+     */
+    @Override
+    public List<TypeTopVO> findTop() {
+        return typeDAO.findTop(6);
     }
 }

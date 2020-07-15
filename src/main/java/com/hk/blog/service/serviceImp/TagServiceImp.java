@@ -3,6 +3,7 @@ package com.hk.blog.service.serviceImp;
 import com.hk.blog.dao.TagDAO;
 import com.hk.blog.entity.Tag;
 import com.hk.blog.service.TagService;
+import com.hk.blog.vo.TagTopVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,5 +53,10 @@ public class TagServiceImp implements TagService {
     @Override
     public Tag getOneByName(String typename) {
         return tagDAO.getOneByName(typename);
+    }
+
+    @Override
+    public List<TagTopVO> findTop() {
+        return tagDAO.findTop(6);
     }
 }

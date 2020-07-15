@@ -39,5 +39,9 @@
     <delete id="delete" parameterType="Long">
         delete from t_tag where id=#{id}
     </delete>
+
+    <select id="findTop" parameterType="Integer" resultType="com.hk.blog.vo.TagTopVO">
+        select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit #{high}
+    </select>
 </mapper>
 

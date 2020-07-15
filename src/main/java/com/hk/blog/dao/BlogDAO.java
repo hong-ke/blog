@@ -11,4 +11,8 @@ public interface BlogDAO extends BaseDAO<Blog,Long>{
     List<Blog> listAll(BlogQuery blogQuery);
 
     int saveReId(Blog blog);
+
+    List<Blog> findTop(Integer high);
+
+    List<Blog> findByQuery(String query);
 }

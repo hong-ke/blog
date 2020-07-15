@@ -12,6 +12,8 @@ public interface UserDAO {
     //根据用户名查询用户
     User findByUsername(String username);
 
+    User findByUserId(Long id);
+
     //注册用户
     void save(User user);
 }

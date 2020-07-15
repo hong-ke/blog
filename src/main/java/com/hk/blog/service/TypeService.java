@@ -1,6 +1,7 @@
 package com.hk.blog.service;
 
 import com.hk.blog.entity.Type;
+import com.hk.blog.vo.TypeTopVO;
 
 import java.util.List;
 
@@ -21,4 +22,6 @@ public interface TypeService {
     Integer findTotals();
 
     Type getOneByName(String typename);
+
+    List<TypeTopVO> findTop();
 }

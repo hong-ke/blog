@@ -35,4 +35,8 @@ public interface BlogService {
 
     void deleteBlog(Long id);
 
+    List<Blog> findTop();
+
+    PageInfo<Blog> findByQuery(Integer page,String query);
+
 }

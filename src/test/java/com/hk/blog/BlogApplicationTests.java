@@ -6,6 +6,7 @@ import com.hk.blog.entity.Blog;
 import com.hk.blog.entity.Type;
 import com.hk.blog.entity.User;
 import com.hk.blog.service.BlogService;
+import com.hk.blog.service.TagService;
 import com.hk.blog.service.TypeService;
 import com.hk.blog.service.UserService;
 import org.junit.jupiter.api.Test;
@@ -22,6 +23,9 @@ class BlogApplicationTests {
 
     @Autowired
     private BlogService blogService;
+
+    @Autowired
+    private TagService tagService;
     @Test
     void contextLoads() {
         PageHelper.startPage(1,3);
@@ -32,9 +36,22 @@ class BlogApplicationTests {
 
     @Test
     void blog() {
-        Blog blog = blogService.getBlog(2L);
-        System.out.println(blog);
-        blogService.updateBlog(blog);
+//        Blog blog = blogService.getBlog(2L);
+//        System.out.println(blog);
+//        blogService.updateBlog(blog);
+        //System.out.println(blogService.findTop());
+        System.out.println(blogService.findByQuery(null,"前序"));
     }
 
+    @Test
+    void type() {
+
+        System.out.println(typeService.findTop());
+    }
+
+    @Test
+    void tag() {
+
+        System.out.println(tagService.findTop());
+    }
 }

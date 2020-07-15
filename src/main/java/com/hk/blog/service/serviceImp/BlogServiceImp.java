@@ -2,15 +2,15 @@ package com.hk.blog.service.serviceImp;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.hk.blog.dao.BlogDAO;
-import com.hk.blog.dao.BlogTagsDAO;
-import com.hk.blog.dao.TagDAO;
-import com.hk.blog.dao.TypeDAO;
+import com.hk.blog.NotFoundException;
+import com.hk.blog.dao.*;
 import com.hk.blog.entity.Blog;
 import com.hk.blog.entity.BlogTags;
 import com.hk.blog.entity.Tag;
 import com.hk.blog.service.BlogService;
+import com.hk.blog.util.MarkdownUtils;
 import com.hk.blog.vo.BlogQuery;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +32,8 @@ public class BlogServiceImp implements BlogService {
     @Autowired
     private TypeDAO typeDAO;
 
+    @Autowired
+    private UserDAO userDAO;
     @Transient
     @Override
     public Blog getBlog(Long id) {
@@ -40,7 +42,16 @@ public class BlogServiceImp implements BlogService {
 
     @Override
     public Blog getAndConvert(Long id) {
-        return null;
+        Blog blog = blogDAO.getOne(id);
+        if (blog == null) {
+            throw new NotFoundException("该博客不存在");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        b = SetTypeTag(b);
+        return b;
     }
 
     /**
@@ -58,7 +69,7 @@ public class BlogServiceImp implements BlogService {
         List<Blog> blogs = blogDAO.listAll(blogQuery);//分页查询符合条件的数据
         PageInfo<Blog> pageInfo = new PageInfo<>(blogs);
         List<Blog> blogList = new ArrayList<>();
-        for (Blog b :pageInfo.getList()) {//封装tag、type等
+        for (Blog b :pageInfo.getList()) {//封装tag、type、user等
             b = SetTypeTag(b);
             blogList.add(b);
         }
@@ -73,6 +84,7 @@ public class BlogServiceImp implements BlogService {
      * @return
      */
     private Blog SetTypeTag(Blog b){
+        b.setUser(userDAO.findByUserId(b.getUserId()));
         b.setType(typeDAO.getOne(b.getTypeId()));//封装type
         List<BlogTags> blogTagList = blogTagsDAO.getOneByBlog(b.getId());//查询该博客所有tag
         List<Tag> tagList = new ArrayList<>();
@@ -114,6 +126,12 @@ public class BlogServiceImp implements BlogService {
         }
     }
 
+    /**
+     * 切分多个tag
+     * @param blogId
+     * @param ids
+     * @return
+     */
     private List<BlogTags> converToList(Long blogId, String ids){
         if ("".equals(ids) && ids == null) return null;
         List<BlogTags> list = new ArrayList<>();
@@ -138,4 +156,35 @@ public class BlogServiceImp implements BlogService {
     public void deleteBlog(Long id) {
         blogDAO.delete(id);
     }
+
+    @Override
+    public List<Blog> findTop() {
+        return blogDAO.findTop(8);
+    }
+
+    /**
+     * 首页搜索
+     * @param page
+     * @param query
+     * @return
+     */
+    @Transient
+    @Override
+    public PageInfo<Blog> findByQuery(Integer page,String query) {
+        if (page == null){
+            page=0;
+        }
+        PageHelper.startPage(page,5);
+        List<Blog> blogs = blogDAO.findByQuery(query);//分页查询符合条件的数据
+        PageInfo<Blog> pageInfo = new PageInfo<>(blogs);
+        List<Blog> blogList = new ArrayList<>();
+        for (Blog b :pageInfo.getList()) {//封装tag、type、user等
+            b = SetTypeTag(b);
+            blogList.add(b);
+        }
+        pageInfo.setList(blogList);
+        return pageInfo;
+    }
+
+
 }
