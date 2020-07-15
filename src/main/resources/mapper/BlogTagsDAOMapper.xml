@@ -1,0 +1,47 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.hk.blog.dao.BlogTagsDAO">
+
+    <!--查询所有-->
+    <select id="listAll" resultType="com.hk.blog.entity.BlogTags">
+        select * from t_blog_tags
+    </select>
+
+    <!--按id-->
+    <select id="getOneByBlog" parameterType="Long" resultType="com.hk.blog.entity.BlogTags">
+        select * from t_blog_tags where blogs_id=#{blogsId}
+    </select>
+
+    <!--查询一条按typename-->
+    <select id="getOneByName" parameterType="String" resultType="com.hk.blog.entity.BlogTags">
+        select * from t_blog_tags where typename=#{typename}
+    </select>
+
+    <!--分页查询-->
+    <select id="findByPage" resultType="com.hk.blog.entity.BlogTags">
+        select * from t_blog_tags order by id limit #{start},#{rows}
+    </select>
+
+    <!--查询总数-->
+    <select id="findTotals" resultType="Integer">
+        select count(*) from t_blog_tags
+    </select>
+
+    <update id="update" parameterType="com.hk.blog.entity.BlogTags">
+        update t_blog_tags set typename=#{typename} where id=#{id}
+    </update>
+
+    <insert id="saveList" parameterType="java.util.ArrayList">
+        insert into t_blog_tags values
+        <foreach collection="list" item="BlogTags" separator=",">
+            (#{BlogTags.blogsId},#{BlogTags.tagsId})
+        </foreach>
+
+    </insert>
+
+    <delete id="delete" parameterType="Long">
+        delete from t_blog_tags where blogs_id=#{blogsId}
+    </delete>
+</mapper>
+
