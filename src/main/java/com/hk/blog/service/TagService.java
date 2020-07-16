@@ -25,5 +25,5 @@ public interface TagService {
 
     Tag getOneByName(String tagname);
 
-    List<TagTopVO> findTop();
+    List<TagTopVO> findTop(Integer high);
 }

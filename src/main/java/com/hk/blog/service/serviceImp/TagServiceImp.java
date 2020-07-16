@@ -56,7 +56,7 @@ public class TagServiceImp implements TagService {
     }
 
     @Override
-    public List<TagTopVO> findTop() {
-        return tagDAO.findTop(6);
+    public List<TagTopVO> findTop(Integer high) {
+        return tagDAO.findTop(high);
     }
 }

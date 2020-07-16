@@ -23,5 +23,5 @@ public interface TypeService {
 
     Type getOneByName(String typename);
 
-    List<TypeTopVO> findTop();
+    List<TypeTopVO> findTop(Integer high);
 }

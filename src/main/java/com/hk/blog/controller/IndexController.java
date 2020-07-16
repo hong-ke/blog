@@ -38,8 +38,8 @@ public class IndexController {
     public String index(@Param("page") Integer page, BlogQuery blogQuery, Model model) {
         PageInfo<Blog> pageInfo = blogService.listBlog(page,blogQuery);
         model.addAttribute("page",pageInfo);
-        model.addAttribute("types", typeService.findTop());
-        model.addAttribute("tags", tagService.findTop());
+        model.addAttribute("types", typeService.findTop(6));
+        model.addAttribute("tags", tagService.findTop(6));
         model.addAttribute("recommendBlogs", blogService.findTop());
         return "index";
     }

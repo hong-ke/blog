@@ -46,12 +46,12 @@ class BlogApplicationTests {
     @Test
     void type() {
 
-        System.out.println(typeService.findTop());
+        System.out.println(typeService.findTop(6));
     }
 
     @Test
     void tag() {
 
-        System.out.println(tagService.findTop());
+        System.out.println(tagService.findTop(6));
     }
 }

@@ -60,7 +60,7 @@ public class TypeServiceImp implements TypeService {
      * @return
      */
     @Override
-    public List<TypeTopVO> findTop() {
-        return typeDAO.findTop(6);
+    public List<TypeTopVO> findTop(Integer high) {
+        return typeDAO.findTop(high);
     }
 }
