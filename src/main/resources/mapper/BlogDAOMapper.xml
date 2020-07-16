@@ -29,6 +29,16 @@
         select * from t_blog where recommend=1 order by update_time desc limit #{high}
     </select>
 
+    <!--对年份分组-->
+    <select id="archiveBlog" resultType="String">
+        select date_format(update_time,'%Y') as year from t_blog group by year order by year desc
+    </select>
+
+    <!--按照年份查询-->
+    <select id="archiveBlogYear" parameterType="String" resultType="com.hk.blog.entity.Blog">
+        select * from t_blog where date_format(update_time,'%Y')=#{year}
+    </select>
+
     <!--查询一条按typename-->
 <!--    <select id="getOneByName" parameterType="String" resultType="com.hk.blog.entity.Blog">-->
 <!--        select * from t_blog where tagname=#{tagname}-->

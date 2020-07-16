@@ -40,7 +40,8 @@ class BlogApplicationTests {
 //        System.out.println(blog);
 //        blogService.updateBlog(blog);
         //System.out.println(blogService.findTop());
-        System.out.println(blogService.findByQuery(null,"前序"));
+        //System.out.println(blogService.findByQuery(null,"前序"));
+        blogService.archiveBlog();
     }
 
     @Test

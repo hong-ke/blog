@@ -96,8 +96,8 @@ public class BlogServiceImp implements BlogService {
     }
 
     @Override
-    public Long countBlog() {
-        return null;
+    public Integer countBlog() {
+        return blogDAO.findTotals();
     }
 
     /**
@@ -184,6 +184,20 @@ public class BlogServiceImp implements BlogService {
         }
         pageInfo.setList(blogList);
         return pageInfo;
+    }
+
+    /**
+     * 按照年份查询
+     * @return
+     */
+    @Override
+    public Map<String, List<Blog>> archiveBlog() {
+        List<String> years = blogDAO.archiveBlog();
+        Map<String, List<Blog>> blog = new HashMap<>();
+        for (String year : years) {
+            blog.put(year,blogDAO.archiveBlogYear(year));
+        }
+        return blog;
     }
 
 

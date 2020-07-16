@@ -2802,3 +2802,396 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 2020-07-16 09:45:02.849  INFO 1241 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Result : tags
 2020-07-16 09:45:03.207  INFO 1241 --- [http-nio-8080-exec-9] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
 2020-07-16 09:45:03.207  INFO 1241 --- [http-nio-8080-exec-9] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 11:14:30.275  INFO 1241 --- [Thread-177] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:14:30.276  INFO 1241 --- [Thread-177] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-16 11:14:30.284  INFO 1241 --- [Thread-177] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-16 11:14:31.457  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1241 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 11:14:31.457 DEBUG 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 11:14:31.457  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 11:14:31.852  INFO 1241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 11:14:31.853  INFO 1241 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 11:14:31.853  INFO 1241 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 11:14:31.865  INFO 1241 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-16 11:14:31.865  INFO 1241 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 405 ms
+2020-07-16 11:14:31.893  WARN 1241 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'archiveShowController': Unsatisfied dependency expressed through field 'blogService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hk.blog.service.BlogService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-16 11:14:31.893  INFO 1241 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-07-16 11:14:31.900  INFO 1241 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-16 11:14:32.005 ERROR 1241 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field blogService in com.hk.blog.controller.ArchiveShowController required a bean of type 'com.hk.blog.service.BlogService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.hk.blog.service.BlogService' in your configuration.
+
+2020-07-16 11:14:35.342  INFO 1806 --- [main] com.hk.blog.BlogApplicationTests         : Starting BlogApplicationTests on HKs-MacBook-Pro with PID 1806 (started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 11:14:35.343 DEBUG 1806 --- [main] com.hk.blog.BlogApplicationTests         : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 11:14:35.343  INFO 1806 --- [main] com.hk.blog.BlogApplicationTests         : The following profiles are active: dev
+2020-07-16 11:14:38.112  INFO 1806 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:14:38.251  INFO 1806 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 11:14:38.735  INFO 1806 --- [main] com.hk.blog.BlogApplicationTests         : Started BlogApplicationTests in 3.9 seconds (JVM running for 5.296)
+2020-07-16 11:14:39.014  INFO 1806 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-16 11:14:42.349  INFO 1806 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-16 11:14:42.357 DEBUG 1806 --- [main] com.hk.blog.dao.BlogDAO.archiveBlog      : ==>  Preparing: select date_format(update_time,'%Y') as year from t_blog group by year order by year desc 
+2020-07-16 11:14:42.393 DEBUG 1806 --- [main] com.hk.blog.dao.BlogDAO.archiveBlog      : ==> Parameters: 
+2020-07-16 11:14:42.418 DEBUG 1806 --- [main] com.hk.blog.dao.BlogDAO.archiveBlog      : <==      Total: 1
+2020-07-16 11:14:42.427 DEBUG 1806 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==>  Preparing: select * from t_blog where date_format(update_time,'%Y')=? 
+2020-07-16 11:14:42.427 DEBUG 1806 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==> Parameters: 2020(String)
+2020-07-16 11:14:42.446 DEBUG 1806 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : <==      Total: 15
+2020-07-16 11:14:42.447 DEBUG 1806 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==>  Preparing: select * from t_blog where date_format(update_time,'%Y')=? 
+2020-07-16 11:14:42.448 DEBUG 1806 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==> Parameters: 2020(String)
+2020-07-16 11:14:42.462 DEBUG 1806 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : <==      Total: 15
+2020-07-16 11:14:42.493  INFO 1806 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:14:42.494  INFO 1806 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-16 11:14:42.525  INFO 1806 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-16 11:19:59.114  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1241 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 11:19:59.114 DEBUG 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 11:19:59.114  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 11:19:59.512  INFO 1241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 11:19:59.513  INFO 1241 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 11:19:59.513  INFO 1241 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 11:19:59.522  INFO 1241 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-07-16 11:19:59.522  INFO 1241 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 404 ms
+2020-07-16 11:19:59.548  WARN 1241 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'archiveShowController': Unsatisfied dependency expressed through field 'blogService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hk.blog.service.BlogService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-16 11:19:59.548  INFO 1241 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-07-16 11:19:59.553  INFO 1241 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-16 11:19:59.630 ERROR 1241 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field blogService in com.hk.blog.controller.ArchiveShowController required a bean of type 'com.hk.blog.service.BlogService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.hk.blog.service.BlogService' in your configuration.
+
+2020-07-16 11:20:02.202  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1241 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 11:20:02.202 DEBUG 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 11:20:02.202  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 11:20:02.459  INFO 1857 --- [main] com.hk.blog.BlogApplicationTests         : Starting BlogApplicationTests on HKs-MacBook-Pro with PID 1857 (started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 11:20:02.460 DEBUG 1857 --- [main] com.hk.blog.BlogApplicationTests         : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 11:20:02.461  INFO 1857 --- [main] com.hk.blog.BlogApplicationTests         : The following profiles are active: dev
+2020-07-16 11:20:02.609  INFO 1241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 11:20:02.610  INFO 1241 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 11:20:02.610  INFO 1241 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 11:20:02.620  INFO 1241 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-07-16 11:20:02.621  INFO 1241 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 415 ms
+2020-07-16 11:20:03.074  INFO 1241 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:20:03.139  INFO 1241 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 11:20:03.432  INFO 1241 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-16 11:20:03.447  INFO 1241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-16 11:20:03.451  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Started BlogApplication in 1.285 seconds (JVM running for 5724.525)
+2020-07-16 11:20:03.453  INFO 1241 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-07-16 11:20:05.057  INFO 1857 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:20:05.194  INFO 1857 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 11:20:05.622  INFO 1857 --- [main] com.hk.blog.BlogApplicationTests         : Started BlogApplicationTests in 3.706 seconds (JVM running for 4.909)
+2020-07-16 11:20:05.862  INFO 1857 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-16 11:20:06.383  INFO 1857 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-16 11:20:06.391 DEBUG 1857 --- [main] com.hk.blog.dao.BlogDAO.archiveBlog      : ==>  Preparing: select date_format(update_time,'%Y') as year from t_blog group by year order by year desc 
+2020-07-16 11:20:06.426 DEBUG 1857 --- [main] com.hk.blog.dao.BlogDAO.archiveBlog      : ==> Parameters: 
+2020-07-16 11:20:06.448 DEBUG 1857 --- [main] com.hk.blog.dao.BlogDAO.archiveBlog      : <==      Total: 1
+2020-07-16 11:20:06.456 DEBUG 1857 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==>  Preparing: select * from t_blog where date_format(update_time,'%Y')=? 
+2020-07-16 11:20:06.457 DEBUG 1857 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==> Parameters: 2020(String)
+2020-07-16 11:20:06.474 DEBUG 1857 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : <==      Total: 15
+2020-07-16 11:20:06.498  INFO 1857 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:20:06.500  INFO 1857 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-16 11:20:06.554  INFO 1857 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-16 11:20:11.539  INFO 1862 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1862 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 11:20:11.542 DEBUG 1862 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 11:20:11.543  INFO 1862 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 11:20:11.591  INFO 1862 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-16 11:20:11.591  INFO 1862 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-16 11:20:12.850  INFO 1862 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 11:20:12.858  INFO 1862 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 11:20:12.858  INFO 1862 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 11:20:12.916  INFO 1862 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-16 11:20:12.917  INFO 1862 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1326 ms
+2020-07-16 11:20:13.599  INFO 1862 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:20:13.688  INFO 1862 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 11:20:14.015  WARN 1862 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-07-16 11:20:14.057  WARN 1862 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-07-16 11:20:14.059  INFO 1862 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:20:14.062  INFO 1862 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-07-16 11:20:14.072  INFO 1862 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-16 11:20:14.076 ERROR 1862 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-07-16 11:22:31.603  INFO 1241 --- [Thread-184] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:22:31.787  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1241 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 11:22:31.788 DEBUG 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 11:22:31.788  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 11:22:32.114  INFO 1241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-07-16 11:22:32.115  INFO 1241 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 11:22:32.115  INFO 1241 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 11:22:32.123  INFO 1241 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-07-16 11:22:32.123  INFO 1241 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 333 ms
+2020-07-16 11:22:32.490  INFO 1919 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1919 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 11:22:32.493 DEBUG 1919 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 11:22:32.494  INFO 1919 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 11:22:32.538  INFO 1241 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:22:32.548  INFO 1919 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-16 11:22:32.549  INFO 1919 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-16 11:22:32.589  INFO 1241 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 11:22:32.885  INFO 1241 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-16 11:22:32.899  INFO 1241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-16 11:22:32.904  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Started BlogApplication in 1.145 seconds (JVM running for 5873.978)
+2020-07-16 11:22:32.906  INFO 1241 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-07-16 11:22:33.909  INFO 1919 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-07-16 11:22:33.919  INFO 1919 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 11:22:33.919  INFO 1919 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 11:22:33.982  INFO 1919 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-16 11:22:33.982  INFO 1919 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1433 ms
+2020-07-16 11:22:34.659  INFO 1919 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:22:34.751  INFO 1919 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 11:22:35.058  WARN 1919 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-07-16 11:22:35.101  WARN 1919 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8081 is already in use
+2020-07-16 11:22:35.104  INFO 1919 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 11:22:35.107  INFO 1919 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-07-16 11:22:35.118  INFO 1919 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-16 11:22:35.122 ERROR 1919 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2020-07-16 11:23:33.115  INFO 1241 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 12:00:06.548  INFO 806 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro.local with PID 806 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 12:00:06.551 DEBUG 806 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 12:00:06.551  INFO 806 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 12:00:06.645  INFO 806 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-16 12:00:06.645  INFO 806 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-16 12:00:08.242  INFO 806 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 12:00:08.253  INFO 806 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 12:00:08.254  INFO 806 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 12:00:08.326  INFO 806 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-16 12:00:08.326  INFO 806 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1680 ms
+2020-07-16 12:00:09.380  INFO 806 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 12:00:09.482  INFO 806 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 12:00:09.854  INFO 806 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-16 12:00:09.913  INFO 806 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-16 12:00:09.927  INFO 806 --- [restartedMain] com.hk.blog.BlogApplication              : Started BlogApplication in 4.233 seconds (JVM running for 5.059)
+2020-07-16 12:01:19.526  INFO 806 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-16 12:01:19.526  INFO 806 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-16 12:01:19.541  INFO 806 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-07-16 12:01:19.582  INFO 806 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.index', args=[null, BlogQuery(title=null, typeId=null, recommend=false), {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 12:01:19.662  INFO 806 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-16 12:01:20.129  INFO 806 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-16 12:01:20.135 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 12:01:20.162 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 12:01:20.187 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 12:01:20.190 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 12:01:20.191 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 12:01:20.200 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 12:01:20.203 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:01:20.203 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:01:20.207 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:01:20.208 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:01:20.209 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:01:20.211 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:01:20.212 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:01:20.212 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 12:01:20.215 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 12:01:20.216 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:01:20.216 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:01:20.218 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:01:20.219 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:01:20.219 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:01:20.221 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:01:20.222 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:01:20.222 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 12:01:20.223 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 12:01:20.224 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:01:20.224 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:01:20.227 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:01:20.227 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:01:20.228 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:01:20.230 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:01:20.230 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:01:20.231 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 12:01:20.233 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 12:01:20.233 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:01:20.234 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:01:20.236 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:01:20.237 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:01:20.237 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:01:20.248 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:01:20.248 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:01:20.249 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 12:01:20.250 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 12:01:20.251 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:01:20.252 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:01:20.254 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:01:20.255 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:01:20.255 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:01:20.257 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:01:20.259 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:01:20.259 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 12:01:20.260 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 12:01:20.262 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : ==>  Preparing: select type_id as id,typename,count(type_id) as size from t_blog join t_type on t_blog.type_id=t_type.id GROUP BY type_id limit ? 
+2020-07-16 12:01:20.263 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : ==> Parameters: 6(Integer)
+2020-07-16 12:01:20.266 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : <==      Total: 5
+2020-07-16 12:01:20.266 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 12:01:20.267 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 6(Integer)
+2020-07-16 12:01:20.271 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 12:01:20.271 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.findTop          : ==>  Preparing: select * from t_blog where recommend=1 order by update_time desc limit ? 
+2020-07-16 12:01:20.272 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.findTop          : ==> Parameters: 8(Integer)
+2020-07-16 12:01:20.276 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.findTop          : <==      Total: 6
+2020-07-16 12:01:20.277  INFO 806 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Result : index
+2020-07-16 12:01:21.281  INFO 806 --- [http-nio-8080-exec-4] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 12:01:21.282  INFO 806 --- [http-nio-8080-exec-4] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 12:01:23.160  INFO 806 --- [http-nio-8080-exec-2] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.ArchiveShowController.archives', args=[{}]}
+2020-07-16 12:01:23.166 DEBUG 806 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.archiveBlog      : ==>  Preparing: select date_format(update_time,'%Y') as year from t_blog group by year order by year desc 
+2020-07-16 12:01:23.166 DEBUG 806 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.archiveBlog      : ==> Parameters: 
+2020-07-16 12:01:23.169 DEBUG 806 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.archiveBlog      : <==      Total: 1
+2020-07-16 12:01:23.170 DEBUG 806 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==>  Preparing: select * from t_blog where date_format(update_time,'%Y')=? 
+2020-07-16 12:01:23.170 DEBUG 806 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==> Parameters: 2020(String)
+2020-07-16 12:01:23.179 DEBUG 806 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.archiveBlogYear  : <==      Total: 15
+2020-07-16 12:01:23.180 DEBUG 806 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.findTotals       : ==>  Preparing: select count(*) from t_blog 
+2020-07-16 12:01:23.180 DEBUG 806 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.findTotals       : ==> Parameters: 
+2020-07-16 12:01:23.181 DEBUG 806 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.findTotals       : <==      Total: 1
+2020-07-16 12:01:23.181  INFO 806 --- [http-nio-8080-exec-2] com.hk.blog.aspect.LogAspect             : Result : archives
+2020-07-16 12:01:23.553  INFO 806 --- [http-nio-8080-exec-3] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 12:01:23.554  INFO 806 --- [http-nio-8080-exec-3] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 12:01:32.617  INFO 806 --- [http-nio-8080-exec-10] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/blog/2', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.blog', args=[2, {}]}
+2020-07-16 12:01:32.618 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.BlogDAO.getOne           : ==>  Preparing: select * from t_blog where id=? 
+2020-07-16 12:01:32.619 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.BlogDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:01:32.621 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.BlogDAO.getOne           : <==      Total: 1
+2020-07-16 12:01:32.675 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:01:32.675 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:01:32.677 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:01:32.677 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:01:32.678 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:01:32.679 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:01:32.680 DEBUG 806 --- [http-nio-8080-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:01:32.680 DEBUG 806 --- [http-nio-8080-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 2(Long)
+2020-07-16 12:01:32.682 DEBUG 806 --- [http-nio-8080-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 2
+2020-07-16 12:01:32.683 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-07-16 12:01:32.683 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 2(Long)
+2020-07-16 12:01:32.685 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-07-16 12:01:32.685 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-07-16 12:01:32.686 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 4(Long)
+2020-07-16 12:01:32.687 DEBUG 806 --- [http-nio-8080-exec-10] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-07-16 12:01:32.688  INFO 806 --- [http-nio-8080-exec-10] com.hk.blog.aspect.LogAspect             : Result : blog
+2020-07-16 12:01:33.032  INFO 806 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 12:01:33.032  INFO 806 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 12:01:33.296  INFO 806 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/comments/2', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.CommentController.comments', args=[2, {}]}
+2020-07-16 12:01:33.301 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.CommentDAO.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? 
+2020-07-16 12:01:33.301 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.CommentDAO.findByBlogId  : ==> Parameters: 2(Long)
+2020-07-16 12:01:33.304 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.CommentDAO.findByBlogId  : <==      Total: 0
+2020-07-16 12:01:33.304  INFO 806 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Result : blog :: commentList
+2020-07-16 12:03:14.176  INFO 806 --- [http-nio-8080-exec-9] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.ArchiveShowController.archives', args=[{}]}
+2020-07-16 12:03:14.177 DEBUG 806 --- [http-nio-8080-exec-9] com.hk.blog.dao.BlogDAO.archiveBlog      : ==>  Preparing: select date_format(update_time,'%Y') as year from t_blog group by year order by year desc 
+2020-07-16 12:03:14.178 DEBUG 806 --- [http-nio-8080-exec-9] com.hk.blog.dao.BlogDAO.archiveBlog      : ==> Parameters: 
+2020-07-16 12:03:14.179 DEBUG 806 --- [http-nio-8080-exec-9] com.hk.blog.dao.BlogDAO.archiveBlog      : <==      Total: 1
+2020-07-16 12:03:14.179 DEBUG 806 --- [http-nio-8080-exec-9] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==>  Preparing: select * from t_blog where date_format(update_time,'%Y')=? 
+2020-07-16 12:03:14.180 DEBUG 806 --- [http-nio-8080-exec-9] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==> Parameters: 2020(String)
+2020-07-16 12:03:14.184 DEBUG 806 --- [http-nio-8080-exec-9] com.hk.blog.dao.BlogDAO.archiveBlogYear  : <==      Total: 15
+2020-07-16 12:03:14.185 DEBUG 806 --- [http-nio-8080-exec-9] com.hk.blog.dao.BlogDAO.findTotals       : ==>  Preparing: select count(*) from t_blog 
+2020-07-16 12:03:14.185 DEBUG 806 --- [http-nio-8080-exec-9] com.hk.blog.dao.BlogDAO.findTotals       : ==> Parameters: 
+2020-07-16 12:03:14.186 DEBUG 806 --- [http-nio-8080-exec-9] com.hk.blog.dao.BlogDAO.findTotals       : <==      Total: 1
+2020-07-16 12:03:14.186  INFO 806 --- [http-nio-8080-exec-9] com.hk.blog.aspect.LogAspect             : Result : archives
+2020-07-16 12:03:14.543  INFO 806 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 12:03:14.543  INFO 806 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 12:03:38.031  INFO 806 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), -1, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 12:03:38.035 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 12:03:38.035 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 12:03:38.037 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 12:03:38.038 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 12:03:38.038 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 12:03:38.039 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 12:03:38.040 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 12:03:38.040 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 12:03:38.042 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 12:03:38.043 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:03:38.043 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:03:38.044 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:03:38.045 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:03:38.045 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:03:38.046 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:03:38.046 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:03:38.047 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 12:03:38.047 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 12:03:38.048 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:03:38.048 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:03:38.049 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:03:38.050 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:03:38.050 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:03:38.052 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:03:38.052 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:03:38.053 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 12:03:38.054 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 12:03:38.054 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:03:38.055 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:03:38.056 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:03:38.057 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:03:38.057 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:03:38.058 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:03:38.059 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:03:38.059 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 12:03:38.060 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 12:03:38.060 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:03:38.061 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:03:38.062 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:03:38.062 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:03:38.063 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:03:38.064 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:03:38.065 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:03:38.065 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 12:03:38.066 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 12:03:38.066 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 12:03:38.067 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 12:03:38.068 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 12:03:38.069 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 12:03:38.069 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 12:03:38.070 DEBUG 806 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 12:03:38.071 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 12:03:38.071 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 12:03:38.072 DEBUG 806 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 12:03:38.072  INFO 806 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 12:03:38.404  INFO 806 --- [http-nio-8080-exec-3] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 12:03:38.404  INFO 806 --- [http-nio-8080-exec-3] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList

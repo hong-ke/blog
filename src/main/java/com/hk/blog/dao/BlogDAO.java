@@ -15,4 +15,8 @@ public interface BlogDAO extends BaseDAO<Blog,Long>{
     List<Blog> findTop(Integer high);
 
     List<Blog> findByQuery(String query);
+
+    List<String> archiveBlog();
+
+    List<Blog> archiveBlogYear(String year);
 }

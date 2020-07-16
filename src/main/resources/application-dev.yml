@@ -1,3 +1,4 @@
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -20,6 +21,5 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   pageSizeZero: false #pageSize=0
-
 
 

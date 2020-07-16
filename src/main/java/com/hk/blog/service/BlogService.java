@@ -6,6 +6,7 @@ import com.hk.blog.entity.Blog;
 import com.hk.blog.vo.BlogQuery;
 
 import java.util.List;
+import java.util.Map;
 
 public interface BlogService {
 
@@ -27,7 +28,7 @@ public interface BlogService {
 
     PageInfo<Blog> listBlog(Integer page, BlogQuery blogQuery);
 
-    Long countBlog();
+    Integer countBlog();
 
     void saveBlog(Blog blog);
 
@@ -38,5 +39,7 @@ public interface BlogService {
     List<Blog> findTop();
 
     PageInfo<Blog> findByQuery(Integer page,String query);
+
+    Map<String,List<Blog>> archiveBlog();
 
 }
