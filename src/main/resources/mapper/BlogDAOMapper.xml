@@ -17,6 +17,7 @@
                 AND recommend=#{recommend}
             </if>
         </where>
+        order by update_time desc
     </select>
 
     <!--查询一条按id-->

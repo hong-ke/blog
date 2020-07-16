@@ -1,0 +1,18 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.hk.blog.dao.CommentDAO">
+
+    <select id="getOne" parameterType="Long" resultType="com.hk.blog.entity.Comment">
+        select * from t_comment where id = #{id}
+    </select>
+
+    <select id="findByBlogId" parameterType="Long" resultType="com.hk.blog.entity.Comment">
+        select * from t_comment where blog_id = #{blogId}
+    </select>
+
+    <insert id="save" parameterType="com.hk.blog.entity.Comment" useGeneratedKeys="true" keyProperty="id">
+        insert into t_comment values(#{id},#{adminComment},#{avatar},#{content},#{createTime},#{email},#{nickname},#{blogId},#{parentCommentId})
+    </insert>
+</mapper>
+

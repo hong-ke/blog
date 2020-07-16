@@ -20,8 +20,10 @@ public class Comment {
 
     private Date createTime;  //评论时间
     private Blog blog;  // 博客
+    private Long blogId;
     private List<Comment> replyComments;
     private Comment parentComment;
+    private long parentCommentId;
     private boolean adminComment;
 
 }
