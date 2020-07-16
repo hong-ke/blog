@@ -1586,3 +1586,1219 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 2020-07-16 09:34:32.409  INFO 1155 --- [http-nio-8080-exec-3] com.hk.blog.aspect.LogAspect             : Result : types
 2020-07-16 09:34:32.738  INFO 1155 --- [http-nio-8080-exec-2] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
 2020-07-16 09:34:32.738  INFO 1155 --- [http-nio-8080-exec-2] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:38:58.996  INFO 1155 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 09:38:58.996  INFO 1155 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-16 09:38:59.006  INFO 1155 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-16 09:39:03.139  INFO 1202 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1202 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 09:39:03.147 DEBUG 1202 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 09:39:03.148  INFO 1202 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 09:39:03.191  INFO 1202 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-16 09:39:03.191  INFO 1202 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-16 09:39:04.477  INFO 1202 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 09:39:04.486  INFO 1202 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 09:39:04.486  INFO 1202 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 09:39:04.548  INFO 1202 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-16 09:39:04.548  INFO 1202 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1356 ms
+2020-07-16 09:39:05.284  INFO 1202 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 09:39:05.384  INFO 1202 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 09:39:05.694  INFO 1202 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-16 09:39:05.750  INFO 1202 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-16 09:39:05.762  INFO 1202 --- [restartedMain] com.hk.blog.BlogApplication              : Started BlogApplication in 3.133 seconds (JVM running for 3.716)
+2020-07-16 09:39:09.693  INFO 1202 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-16 09:39:09.693  INFO 1202 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-16 09:39:09.703  INFO 1202 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-07-16 09:39:09.739  INFO 1202 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/types/4', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TypeShowController.types', args=[null, BlogQuery(title=null, typeId=null, recommend=false), 4, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:39:09.762  INFO 1202 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-16 09:39:10.138  INFO 1202 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-16 09:39:10.143 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : ==>  Preparing: select type_id as id,typename,count(type_id) as size from t_blog join t_type on t_blog.type_id=t_type.id GROUP BY type_id limit ? 
+2020-07-16 09:39:10.168 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : ==> Parameters: 10000(Integer)
+2020-07-16 09:39:10.190 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : <==      Total: 5
+2020-07-16 09:39:10.237 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog WHERE type_id = ? 
+2020-07-16 09:39:10.238 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 4(Long)
+2020-07-16 09:39:10.240 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:39:10.241 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog WHERE type_id=? order by update_time desc LIMIT ? 
+2020-07-16 09:39:10.241 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 4(Long), 5(Integer)
+2020-07-16 09:39:10.251 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 2
+2020-07-16 09:39:10.252 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:39:10.253 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:39:10.263 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:39:10.264 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:39:10.264 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 4(Long)
+2020-07-16 09:39:10.266 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:39:10.267 DEBUG 1202 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:39:10.267 DEBUG 1202 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 6(Long)
+2020-07-16 09:39:10.269 DEBUG 1202 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:39:10.270 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:39:10.270 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:39:10.273 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:39:10.273 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:39:10.274 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 4(Long)
+2020-07-16 09:39:10.275 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:39:10.276 DEBUG 1202 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:39:10.276 DEBUG 1202 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 4(Long)
+2020-07-16 09:39:10.279 DEBUG 1202 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 4
+2020-07-16 09:39:10.279 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-07-16 09:39:10.280 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 2(Long)
+2020-07-16 09:39:10.281 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-07-16 09:39:10.282 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-07-16 09:39:10.282 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 3(Long)
+2020-07-16 09:39:10.284 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-07-16 09:39:10.284 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-07-16 09:39:10.285 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 4(Long)
+2020-07-16 09:39:10.286 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-07-16 09:39:10.287 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-07-16 09:39:10.288 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 6(Long)
+2020-07-16 09:39:10.290 DEBUG 1202 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-07-16 09:39:10.290  INFO 1202 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Result : types
+2020-07-16 09:39:11.019  INFO 1202 --- [http-nio-8080-exec-5] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:39:11.023  INFO 1202 --- [http-nio-8080-exec-5] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:39:12.734  INFO 1202 --- [http-nio-8080-exec-4] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), -1, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:39:12.741 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 09:39:12.741 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 09:39:12.744 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 09:39:12.745 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 09:39:12.745 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 09:39:12.746 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:39:12.747 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 09:39:12.747 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 09:39:12.753 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:39:12.755 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:39:12.755 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:39:12.756 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:39:12.757 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:39:12.757 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:39:12.759 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:39:12.759 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:39:12.760 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:39:12.761 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:39:12.761 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:39:12.762 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:39:12.764 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:39:12.764 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:39:12.765 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:39:12.766 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:39:12.766 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:39:12.766 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:39:12.767 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:39:12.768 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:39:12.768 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:39:12.770 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:39:12.771 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:39:12.771 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:39:12.772 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:39:12.773 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:39:12.773 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:39:12.774 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:39:12.775 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:39:12.775 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:39:12.776 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:39:12.777 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:39:12.777 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:39:12.779 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:39:12.779 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:39:12.780 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:39:12.780 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:39:12.781 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:39:12.781 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:39:12.783 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:39:12.783 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:39:12.783 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:39:12.785 DEBUG 1202 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:39:12.785 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:39:12.785 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:39:12.786 DEBUG 1202 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:39:12.787  INFO 1202 --- [http-nio-8080-exec-4] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 09:39:12.804 ERROR 1202 --- [http-nio-8080-exec-4] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-4] Exception processing template "tags": An error happened during template parsing (template: "class path resource [templates/tags.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/tags.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "tag.name" (template: "tags" - line 52, col 17)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "tag.name" (template: "tags" - line 52, col 17)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'name' cannot be found on object of type 'com.hk.blog.vo.TagTopVO' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 75 common frames omitted
+
+2020-07-16 09:39:12.807 ERROR 1202 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/tags.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'name' cannot be found on object of type 'com.hk.blog.vo.TagTopVO' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-07-16 09:42:16.628  INFO 1202 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 09:42:16.629  INFO 1202 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-16 09:42:16.639  INFO 1202 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-16 09:42:19.191  INFO 1226 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1226 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 09:42:19.193 DEBUG 1226 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 09:42:19.194  INFO 1226 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 09:42:19.240  INFO 1226 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-16 09:42:19.240  INFO 1226 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-16 09:42:20.454  INFO 1226 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 09:42:20.462  INFO 1226 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 09:42:20.462  INFO 1226 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 09:42:20.523  INFO 1226 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-16 09:42:20.524  INFO 1226 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1283 ms
+2020-07-16 09:42:21.136  INFO 1226 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 09:42:21.221  INFO 1226 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 09:42:21.520  INFO 1226 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-16 09:42:21.572  INFO 1226 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-16 09:42:21.583  INFO 1226 --- [restartedMain] com.hk.blog.BlogApplication              : Started BlogApplication in 2.877 seconds (JVM running for 3.493)
+2020-07-16 09:42:32.368  INFO 1226 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-16 09:42:32.368  INFO 1226 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-16 09:42:32.377  INFO 1226 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-07-16 09:42:32.412  INFO 1226 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TypeShowController.types', args=[null, BlogQuery(title=null, typeId=null, recommend=false), -1, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:42:32.433  INFO 1226 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-16 09:42:32.782  INFO 1226 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-16 09:42:32.787 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : ==>  Preparing: select type_id as id,typename,count(type_id) as size from t_blog join t_type on t_blog.type_id=t_type.id GROUP BY type_id limit ? 
+2020-07-16 09:42:32.809 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : ==> Parameters: 10000(Integer)
+2020-07-16 09:42:32.827 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : <==      Total: 5
+2020-07-16 09:42:32.865 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog WHERE type_id = ? 
+2020-07-16 09:42:32.866 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 2(Long)
+2020-07-16 09:42:32.868 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:42:32.870 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog WHERE type_id=? order by update_time desc LIMIT ? 
+2020-07-16 09:42:32.870 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 2(Long), 5(Integer)
+2020-07-16 09:42:32.878 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:42:32.879 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:42:32.879 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:42:32.882 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:42:32.883 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:42:32.883 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:42:32.885 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:42:32.885 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:42:32.886 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:42:32.888 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:42:32.889 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:42:32.889 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:42:32.900 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:42:32.901 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:42:32.902 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:42:32.903 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:42:32.903 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:42:32.904 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:42:32.905 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:42:32.905 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:42:32.906 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:42:32.908 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:42:32.908 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:42:32.909 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:42:32.910 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:42:32.911 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:42:32.911 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:42:32.912 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:42:32.913 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:42:32.913 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:42:32.914 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:42:32.915 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:42:32.915 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:42:32.917 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:42:32.917 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:42:32.918 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:42:32.919 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:42:32.920 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:42:32.920 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:42:32.923 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:42:32.924 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:42:32.925 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:42:32.926 DEBUG 1226 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:42:32.928 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:42:32.928 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:42:32.929 DEBUG 1226 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:42:32.930  INFO 1226 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Result : types
+2020-07-16 09:42:33.658  INFO 1226 --- [http-nio-8080-exec-6] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:42:33.661  INFO 1226 --- [http-nio-8080-exec-6] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:42:41.718  INFO 1226 --- [http-nio-8080-exec-5] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), -1, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:42:41.725 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 09:42:41.725 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 09:42:41.729 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 09:42:41.730 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 09:42:41.731 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 09:42:41.732 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:42:41.733 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 09:42:41.734 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 09:42:41.736 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:42:41.737 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:42:41.737 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:42:41.739 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:42:41.739 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:42:41.739 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:42:41.740 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:42:41.741 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:42:41.741 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:42:41.742 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:42:41.742 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:42:41.743 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:42:41.745 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:42:41.745 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:42:41.746 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:42:41.747 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:42:41.747 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:42:41.747 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:42:41.748 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:42:41.748 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:42:41.749 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:42:41.750 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:42:41.751 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:42:41.751 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:42:41.753 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:42:41.753 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:42:41.754 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:42:41.755 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:42:41.756 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:42:41.756 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:42:41.757 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:42:41.758 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:42:41.758 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:42:41.760 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:42:41.761 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:42:41.761 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:42:41.762 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:42:41.762 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:42:41.762 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:42:41.764 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:42:41.764 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:42:41.765 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:42:41.766 DEBUG 1226 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:42:41.766 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:42:41.766 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:42:41.767 DEBUG 1226 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:42:41.768  INFO 1226 --- [http-nio-8080-exec-5] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 09:42:41.784 ERROR 1226 --- [http-nio-8080-exec-5] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-5] Exception processing template "tags": An error happened during template parsing (template: "class path resource [templates/tags.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/tags.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "tag.name" (template: "tags" - line 52, col 17)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "tag.name" (template: "tags" - line 52, col 17)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'name' cannot be found on object of type 'com.hk.blog.vo.TagTopVO' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 75 common frames omitted
+
+2020-07-16 09:42:41.786 ERROR 1226 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/tags.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'name' cannot be found on object of type 'com.hk.blog.vo.TagTopVO' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-07-16 09:43:30.701  INFO 1226 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 09:43:30.702  INFO 1226 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-16 09:43:30.713  INFO 1226 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-16 09:43:33.292  INFO 1230 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1230 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 09:43:33.295 DEBUG 1230 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 09:43:33.295  INFO 1230 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 09:43:33.342  INFO 1230 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-16 09:43:33.342  INFO 1230 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-16 09:43:34.474  INFO 1230 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 09:43:34.481  INFO 1230 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 09:43:34.481  INFO 1230 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 09:43:34.531  INFO 1230 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-16 09:43:34.531  INFO 1230 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1189 ms
+2020-07-16 09:43:35.125  INFO 1230 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 09:43:35.204  INFO 1230 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 09:43:35.506  INFO 1230 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-16 09:43:35.553  INFO 1230 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-16 09:43:35.563  INFO 1230 --- [restartedMain] com.hk.blog.BlogApplication              : Started BlogApplication in 2.734 seconds (JVM running for 3.351)
+2020-07-16 09:43:41.259  INFO 1230 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-16 09:43:41.260  INFO 1230 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-16 09:43:41.267  INFO 1230 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-07-16 09:43:41.301  INFO 1230 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), -1, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:43:41.322  INFO 1230 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-16 09:43:41.690  INFO 1230 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-16 09:43:41.695 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 09:43:41.715 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 09:43:41.732 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 09:43:41.767 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 09:43:41.767 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 09:43:41.769 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:43:41.770 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 09:43:41.771 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 09:43:41.778 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:43:41.779 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:41.779 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:41.782 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:41.783 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:41.783 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:41.785 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:41.785 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:41.786 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:43:41.787 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:41.788 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:41.788 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:41.790 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:41.791 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:41.791 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:41.793 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:41.794 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:41.794 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:43:41.796 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:41.797 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:41.797 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:41.808 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:41.809 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:41.809 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:41.811 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:41.812 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:41.812 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:43:41.814 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:41.814 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:41.814 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:41.816 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:41.816 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:41.816 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:41.818 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:41.819 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:41.820 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:43:41.821 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:41.822 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:41.822 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:41.825 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:41.828 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:41.828 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:41.829 DEBUG 1230 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:41.830 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:41.830 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:43:41.832 DEBUG 1230 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:41.832  INFO 1230 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 09:43:42.598  INFO 1230 --- [http-nio-8080-exec-4] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:43:42.603  INFO 1230 --- [http-nio-8080-exec-4] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:43:47.157  INFO 1230 --- [http-nio-8080-exec-5] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/3', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), 3, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:43:47.160 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 09:43:47.160 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 09:43:47.163 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 09:43:47.164 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 09:43:47.165 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 09:43:47.166 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:43:47.167 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 09:43:47.168 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 09:43:47.171 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:43:47.171 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:47.172 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:47.173 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:47.174 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:47.174 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:47.175 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:47.175 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:47.176 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:43:47.177 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:47.178 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:47.178 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:47.180 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:47.180 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:47.180 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:47.181 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:47.182 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:47.182 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:43:47.183 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:47.183 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:47.184 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:47.186 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:47.186 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:47.187 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:47.188 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:47.188 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:47.189 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:43:47.189 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:47.190 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:47.190 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:47.192 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:47.192 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:47.193 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:47.194 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:47.195 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:47.195 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:43:47.196 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:47.196 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:47.196 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:47.197 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:47.198 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:47.198 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:47.199 DEBUG 1230 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:47.200 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:47.200 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:43:47.201 DEBUG 1230 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:47.201  INFO 1230 --- [http-nio-8080-exec-5] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 09:43:47.556  INFO 1230 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:43:47.556  INFO 1230 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:43:50.957  INFO 1230 --- [http-nio-8080-exec-2] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/4', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), 4, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:43:50.958 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 09:43:50.959 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 09:43:50.961 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 09:43:50.962 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 09:43:50.962 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 09:43:50.964 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:43:50.964 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 09:43:50.964 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 09:43:50.967 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:43:50.968 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:50.968 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:50.970 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:50.971 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:50.971 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:50.973 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:50.973 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:50.974 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:43:50.975 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:50.975 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:50.975 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:50.977 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:50.977 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:50.977 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:50.978 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:50.979 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:50.979 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:43:50.980 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:50.980 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:50.980 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:50.981 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:50.981 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:50.981 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:50.982 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:50.983 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:50.983 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:43:50.985 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:50.985 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:50.986 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:50.987 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:50.988 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:50.988 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:50.989 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:50.989 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:50.990 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:43:50.991 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:50.991 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:43:50.991 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:43:50.993 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:43:50.993 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:43:50.993 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:43:50.994 DEBUG 1230 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:43:50.995 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:43:50.995 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:43:50.995 DEBUG 1230 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:43:50.996  INFO 1230 --- [http-nio-8080-exec-2] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 09:43:51.354  INFO 1230 --- [http-nio-8080-exec-10] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:43:51.354  INFO 1230 --- [http-nio-8080-exec-10] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:44:02.166  INFO 1230 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 09:44:02.167  INFO 1230 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-16 09:44:02.178  INFO 1230 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-16 09:44:04.778  INFO 1234 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1234 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 09:44:04.780 DEBUG 1234 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 09:44:04.780  INFO 1234 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 09:44:04.821  INFO 1234 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-16 09:44:04.821  INFO 1234 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-16 09:44:06.055  INFO 1234 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 09:44:06.063  INFO 1234 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 09:44:06.063  INFO 1234 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 09:44:06.133  INFO 1234 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-16 09:44:06.133  INFO 1234 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1312 ms
+2020-07-16 09:44:06.774  INFO 1234 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 09:44:06.863  INFO 1234 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 09:44:07.140  INFO 1234 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-16 09:44:07.191  INFO 1234 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-16 09:44:07.202  INFO 1234 --- [restartedMain] com.hk.blog.BlogApplication              : Started BlogApplication in 2.913 seconds (JVM running for 3.497)
+2020-07-16 09:44:09.144  INFO 1234 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-16 09:44:09.144  INFO 1234 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-16 09:44:09.154  INFO 1234 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-07-16 09:44:09.195  INFO 1234 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/4', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), 4, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:44:09.221  INFO 1234 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-16 09:44:09.570  INFO 1234 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-16 09:44:09.577 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 09:44:09.605 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 09:44:09.627 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 09:44:09.669 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 09:44:09.670 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 09:44:09.671 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:44:09.672 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 09:44:09.673 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 09:44:09.684 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:44:09.686 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:09.686 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:09.694 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:09.695 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:09.695 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:09.697 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:09.698 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:09.698 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:44:09.700 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:09.700 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:09.701 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:09.703 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:09.704 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:09.704 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:09.706 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:09.706 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:09.706 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:44:09.708 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:09.709 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:09.709 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:09.712 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:09.712 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:09.713 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:09.714 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:09.715 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:09.715 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:44:09.717 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:09.718 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:09.718 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:09.720 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:09.721 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:09.721 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:09.724 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:09.725 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:09.725 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:44:09.727 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:09.728 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:09.729 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:09.731 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:09.733 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:09.733 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:09.736 DEBUG 1234 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:09.737 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:09.737 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:44:09.738 DEBUG 1234 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:09.739  INFO 1234 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 09:44:10.468  INFO 1234 --- [http-nio-8080-exec-5] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:44:10.472  INFO 1234 --- [http-nio-8080-exec-5] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:44:37.436  INFO 1234 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 09:44:37.437  INFO 1234 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-16 09:44:37.449  INFO 1234 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-16 09:44:40.052  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 1241 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 09:44:40.055 DEBUG 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 09:44:40.055  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 09:44:40.100  INFO 1241 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-16 09:44:40.100  INFO 1241 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-16 09:44:41.314  INFO 1241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 09:44:41.322  INFO 1241 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 09:44:41.322  INFO 1241 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 09:44:41.378  INFO 1241 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-16 09:44:41.378  INFO 1241 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1277 ms
+2020-07-16 09:44:42.035  INFO 1241 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 09:44:42.117  INFO 1241 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 09:44:42.392  INFO 1241 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-16 09:44:42.444  INFO 1241 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-16 09:44:42.455  INFO 1241 --- [restartedMain] com.hk.blog.BlogApplication              : Started BlogApplication in 2.913 seconds (JVM running for 3.541)
+2020-07-16 09:44:46.068  INFO 1241 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-16 09:44:46.068  INFO 1241 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-16 09:44:46.076  INFO 1241 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-07-16 09:44:46.114  INFO 1241 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TypeShowController.types', args=[null, BlogQuery(title=null, typeId=null, recommend=false), -1, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:44:46.136  INFO 1241 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-16 09:44:46.506  INFO 1241 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-16 09:44:46.512 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : ==>  Preparing: select type_id as id,typename,count(type_id) as size from t_blog join t_type on t_blog.type_id=t_type.id GROUP BY type_id limit ? 
+2020-07-16 09:44:46.531 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : ==> Parameters: 10000(Integer)
+2020-07-16 09:44:46.552 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.findTop          : <==      Total: 5
+2020-07-16 09:44:46.589 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog WHERE type_id = ? 
+2020-07-16 09:44:46.589 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 2(Long)
+2020-07-16 09:44:46.591 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:44:46.593 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog WHERE type_id=? order by update_time desc LIMIT ? 
+2020-07-16 09:44:46.593 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 2(Long), 5(Integer)
+2020-07-16 09:44:46.602 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:44:46.603 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:46.604 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:46.607 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:46.608 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:46.609 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:46.611 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:46.612 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:46.612 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:44:46.614 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:46.614 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:46.615 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:46.624 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:46.624 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:46.625 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:46.626 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:46.627 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:46.627 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:44:46.629 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:46.629 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:46.630 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:46.632 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:46.632 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:46.632 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:46.634 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:46.635 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:46.635 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:44:46.636 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:46.637 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:46.637 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:46.639 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:46.639 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:46.639 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:46.641 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:46.642 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:46.642 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:44:46.643 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:46.644 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:46.645 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:46.647 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:46.649 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:46.649 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:46.651 DEBUG 1241 --- [http-nio-8080-exec-1] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:46.651 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:46.652 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:44:46.653 DEBUG 1241 --- [http-nio-8080-exec-1] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:46.653  INFO 1241 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Result : types
+2020-07-16 09:44:47.364  INFO 1241 --- [http-nio-8080-exec-4] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:44:47.370  INFO 1241 --- [http-nio-8080-exec-4] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:44:49.528  INFO 1241 --- [http-nio-8080-exec-5] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), -1, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:44:49.536 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 09:44:49.536 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 09:44:49.539 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 09:44:49.540 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 09:44:49.540 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 09:44:49.542 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:44:49.543 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 09:44:49.543 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 09:44:49.546 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:44:49.547 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:49.547 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:49.549 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:49.550 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:49.550 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:49.551 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:49.551 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:49.552 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:44:49.553 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:49.553 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:49.553 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:49.555 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:49.556 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:49.556 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:49.558 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:49.558 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:49.559 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:44:49.560 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:49.561 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:49.561 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:49.562 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:49.563 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:49.563 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:49.564 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:49.565 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:49.565 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:44:49.843 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:49.844 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:49.844 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:49.846 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:49.846 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:49.846 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:49.847 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:49.848 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:49.848 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:44:49.850 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:49.850 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:49.851 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:49.853 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:49.854 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:49.854 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:49.855 DEBUG 1241 --- [http-nio-8080-exec-5] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:49.856 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:49.856 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:44:49.858 DEBUG 1241 --- [http-nio-8080-exec-5] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:49.858  INFO 1241 --- [http-nio-8080-exec-5] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 09:44:50.190  INFO 1241 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:44:50.191  INFO 1241 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:44:53.934  INFO 1241 --- [http-nio-8080-exec-2] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/3', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), 3, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:44:53.936 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 09:44:53.937 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 09:44:53.939 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 09:44:53.941 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 09:44:53.941 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 09:44:53.942 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:44:53.943 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 09:44:53.943 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 09:44:53.946 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:44:53.947 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:53.947 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:53.949 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:53.950 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:53.950 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:53.952 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:53.952 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:53.952 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:44:53.953 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:53.953 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:53.954 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:53.955 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:53.955 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:53.955 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:53.957 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:53.957 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:53.957 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:44:53.959 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:53.959 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:53.960 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:53.961 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:53.961 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:53.961 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:53.962 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:53.962 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:53.963 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:44:53.964 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:53.964 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:53.964 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:53.966 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:53.966 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:53.967 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:53.968 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:53.969 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:53.969 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:44:53.970 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:53.970 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:53.971 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:53.972 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:53.972 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:53.973 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:53.974 DEBUG 1241 --- [http-nio-8080-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:53.975 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:53.975 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:44:53.976 DEBUG 1241 --- [http-nio-8080-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:53.976  INFO 1241 --- [http-nio-8080-exec-2] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 09:44:54.295  INFO 1241 --- [http-nio-8080-exec-9] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:44:54.295  INFO 1241 --- [http-nio-8080-exec-9] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:44:59.878  INFO 1241 --- [http-nio-8080-exec-4] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/4', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), 4, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:44:59.879 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 09:44:59.879 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 09:44:59.881 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 09:44:59.883 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 09:44:59.883 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 09:44:59.884 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:44:59.884 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 09:44:59.885 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 09:44:59.892 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:44:59.893 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:59.893 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:59.896 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:59.896 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:59.897 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:59.899 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:59.899 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:59.899 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:44:59.900 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:59.901 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:59.902 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:59.903 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:59.903 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:59.904 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:59.905 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:59.905 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:59.905 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:44:59.906 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:59.906 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:59.907 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:59.908 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:59.909 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:59.909 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:59.910 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:59.911 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:59.911 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:44:59.912 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:59.912 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:59.913 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:59.914 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:59.914 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:59.914 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:59.916 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:59.916 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:59.916 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:44:59.918 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:59.918 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:44:59.919 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:44:59.920 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:44:59.920 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:44:59.920 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:44:59.921 DEBUG 1241 --- [http-nio-8080-exec-4] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:44:59.921 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:44:59.922 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:44:59.922 DEBUG 1241 --- [http-nio-8080-exec-4] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:44:59.922  INFO 1241 --- [http-nio-8080-exec-4] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 09:45:00.295  INFO 1241 --- [http-nio-8080-exec-10] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:45:00.296  INFO 1241 --- [http-nio-8080-exec-10] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 09:45:02.812  INFO 1241 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/tags/6', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.TagShowController.tags', args=[null, BlogQuery(title=null, typeId=null, recommend=false), 6, {blogQuery=BlogQuery(title=null, typeId=null, recommend=false), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-07-16 09:45:02.814 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-07-16 09:45:02.814 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 10000(Integer)
+2020-07-16 09:45:02.817 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 4
+2020-07-16 09:45:02.818 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-07-16 09:45:02.818 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-07-16 09:45:02.819 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-07-16 09:45:02.820 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-07-16 09:45:02.820 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-07-16 09:45:02.822 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-07-16 09:45:02.823 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:45:02.823 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:45:02.825 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:45:02.825 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:45:02.826 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:45:02.827 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:45:02.828 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:45:02.828 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 16(Long)
+2020-07-16 09:45:02.829 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:45:02.829 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:45:02.829 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:45:02.830 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:45:02.831 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:45:02.831 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:45:02.832 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:45:02.832 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:45:02.832 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 15(Long)
+2020-07-16 09:45:02.834 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:45:02.834 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:45:02.834 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:45:02.836 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:45:02.836 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:45:02.836 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:45:02.837 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:45:02.837 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:45:02.838 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 14(Long)
+2020-07-16 09:45:02.838 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:45:02.839 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:45:02.839 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:45:02.840 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:45:02.841 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:45:02.841 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:45:02.842 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:45:02.843 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:45:02.843 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 13(Long)
+2020-07-16 09:45:02.844 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:45:02.845 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-07-16 09:45:02.845 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-07-16 09:45:02.846 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-07-16 09:45:02.847 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-07-16 09:45:02.847 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 2(Long)
+2020-07-16 09:45:02.848 DEBUG 1241 --- [http-nio-8080-exec-7] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-07-16 09:45:02.848 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-07-16 09:45:02.848 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 12(Long)
+2020-07-16 09:45:02.849 DEBUG 1241 --- [http-nio-8080-exec-7] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 0
+2020-07-16 09:45:02.849  INFO 1241 --- [http-nio-8080-exec-7] com.hk.blog.aspect.LogAspect             : Result : tags
+2020-07-16 09:45:03.207  INFO 1241 --- [http-nio-8080-exec-9] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-07-16 09:45:03.207  INFO 1241 --- [http-nio-8080-exec-9] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
