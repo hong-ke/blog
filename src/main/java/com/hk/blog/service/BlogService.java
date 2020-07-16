@@ -36,7 +36,7 @@ public interface BlogService {
 
     void deleteBlog(Long id);
 
-    List<Blog> findTop();
+    List<Blog> findTop(Integer high);
 
     PageInfo<Blog> findByQuery(Integer page,String query);
 

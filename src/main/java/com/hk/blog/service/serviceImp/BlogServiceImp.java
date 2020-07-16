@@ -46,6 +46,8 @@ public class BlogServiceImp implements BlogService {
         if (blog == null) {
             throw new NotFoundException("该博客不存在");
         }
+        blog.setViews(blog.getViews()+1);
+        blogDAO.update(blog);
         Blog b = new Blog();
         BeanUtils.copyProperties(blog,b);
         String content = b.getContent();
@@ -158,8 +160,8 @@ public class BlogServiceImp implements BlogService {
     }
 
     @Override
-    public List<Blog> findTop() {
-        return blogDAO.findTop(8);
+    public List<Blog> findTop(Integer high) {
+        return blogDAO.findTop(high);
     }
 
     /**
@@ -193,7 +195,7 @@ public class BlogServiceImp implements BlogService {
     @Override
     public Map<String, List<Blog>> archiveBlog() {
         List<String> years = blogDAO.archiveBlog();
-        Map<String, List<Blog>> blog = new HashMap<>();
+        Map<String, List<Blog>> blog = new LinkedHashMap<>();
         for (String year : years) {
             blog.put(year,blogDAO.archiveBlogYear(year));
         }

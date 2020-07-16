@@ -40,7 +40,7 @@ public class IndexController {
         model.addAttribute("page",pageInfo);
         model.addAttribute("types", typeService.findTop(6));
         model.addAttribute("tags", tagService.findTop(6));
-        model.addAttribute("recommendBlogs", blogService.findTop());
+        model.addAttribute("recommendBlogs", blogService.findTop(8));
         return "index";
     }
 
@@ -77,7 +77,7 @@ public class IndexController {
      */
     @GetMapping("/footer/newblog")
     public String newblogs(Model model) {
-
+        model.addAttribute("newblogs", blogService.findTop(3));
         return "_fragments :: newblogList";
     }
 
