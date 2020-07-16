@@ -3195,3 +3195,21 @@ Identify and stop the process that's listening on port 8081 or configure this ap
 2020-07-16 12:03:38.072  INFO 806 --- [http-nio-8080-exec-1] com.hk.blog.aspect.LogAspect             : Result : tags
 2020-07-16 12:03:38.404  INFO 806 --- [http-nio-8080-exec-3] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
 2020-07-16 12:03:38.404  INFO 806 --- [http-nio-8080-exec-3] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-07-16 12:04:54.865  INFO 806 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-16 12:04:54.866  INFO 806 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-16 12:04:54.875  INFO 806 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-16 12:09:51.299  INFO 976 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on HKs-MacBook-Pro with PID 976 (/Users/hk/Demo/Java-Code/blog/target/classes started by hk in /Users/hk/Demo/Java-Code/blog)
+2020-07-16 12:09:51.303 DEBUG 976 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-16 12:09:51.303  INFO 976 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: dev
+2020-07-16 12:09:51.370  INFO 976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-16 12:09:51.371  INFO 976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-16 12:09:52.959  INFO 976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-16 12:09:52.973  INFO 976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-16 12:09:52.973  INFO 976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-16 12:09:53.046  INFO 976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-16 12:09:53.047  INFO 976 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1676 ms
+2020-07-16 12:09:53.869  INFO 976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-16 12:09:53.973  INFO 976 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-16 12:09:54.380  INFO 976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-16 12:09:54.436  INFO 976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-16 12:09:54.449  INFO 976 --- [restartedMain] com.hk.blog.BlogApplication              : Started BlogApplication in 3.853 seconds (JVM running for 4.728)
