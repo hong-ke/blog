@@ -293,3 +293,237 @@
 2020-08-07 19:59:08.671 DEBUG 10200 --- [http-nio-8181-exec-1] com.hk.blog.dao.TagDAO.listAll           : ==>  Preparing: select * from t_tag 
 2020-08-07 19:59:08.671 DEBUG 10200 --- [http-nio-8181-exec-1] com.hk.blog.dao.TagDAO.listAll           : ==> Parameters: 
 2020-08-07 19:59:08.683 DEBUG 10200 --- [http-nio-8181-exec-1] com.hk.blog.dao.TagDAO.listAll           : <==      Total: 11
+2020-08-07 20:15:36.511  INFO 8672 --- [restartedMain] com.hk.blog.BlogApplication              : Starting BlogApplication on DESKTOP-0EJ1N0L with PID 8672 (E:\IntelliJ IDEA Dome\blog\blog\target\classes started by Mr.Duan in E:\IntelliJ IDEA Dome\blog\blog)
+2020-08-07 20:15:36.514 DEBUG 8672 --- [restartedMain] com.hk.blog.BlogApplication              : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-08-07 20:15:36.514  INFO 8672 --- [restartedMain] com.hk.blog.BlogApplication              : The following profiles are active: pro
+2020-08-07 20:15:39.558  INFO 8672 --- [restartedMain] com.hk.blog.BlogApplication              : Started BlogApplication in 4.019 seconds (JVM running for 5.215)
+2020-08-07 20:15:49.789 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUsername   : ==>  Preparing: select * from t_user where username = ? 
+2020-08-07 20:15:49.810 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUsername   : ==> Parameters: admin(String)
+2020-08-07 20:15:49.837 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUsername   : <==      Total: 1
+2020-08-07 20:15:50.327  INFO 8672 --- [http-nio-8181-exec-9] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8181/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-08-07 20:15:50.332 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : ==>  Preparing: select * from t_blog where recommend=1 order by update_time desc limit ? 
+2020-08-07 20:15:50.333 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : ==> Parameters: 3(Integer)
+2020-08-07 20:15:50.370 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : <==      Total: 3
+2020-08-07 20:15:50.371  INFO 8672 --- [http-nio-8181-exec-9] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-08-07 20:15:51.153 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-08-07 20:15:51.154 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-08-07 20:15:51.163 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-08-07 20:15:51.164 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-08-07 20:15:51.164 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-08-07 20:15:51.200 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-08-07 20:15:51.202 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-08-07 20:15:51.202 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-08-07 20:15:51.215 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-08-07 20:15:51.216 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-08-07 20:15:51.217 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 15(Long)
+2020-08-07 20:15:51.225 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-08-07 20:15:51.226 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-08-07 20:15:51.226 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 25(Long)
+2020-08-07 20:15:51.235 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 1
+2020-08-07 20:15:51.236 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:15:51.236 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 18(Long)
+2020-08-07 20:15:51.247 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:15:51.248 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-08-07 20:15:51.248 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-08-07 20:15:51.257 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-08-07 20:15:51.258 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-08-07 20:15:51.258 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 15(Long)
+2020-08-07 20:15:51.266 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-08-07 20:15:51.267 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-08-07 20:15:51.267 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 26(Long)
+2020-08-07 20:15:51.276 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 1
+2020-08-07 20:15:51.277 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:15:51.277 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 10(Long)
+2020-08-07 20:15:51.286 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:15:51.287 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-08-07 20:15:51.288 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-08-07 20:15:51.300 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-08-07 20:15:51.301 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-08-07 20:15:51.301 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 16(Long)
+2020-08-07 20:15:51.311 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-08-07 20:15:51.312 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-08-07 20:15:51.313 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 24(Long)
+2020-08-07 20:15:51.323 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 1
+2020-08-07 20:15:51.323 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:15:51.324 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 17(Long)
+2020-08-07 20:15:51.334 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:15:51.337 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-08-07 20:15:51.337 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-08-07 20:15:51.355 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-08-07 20:15:51.357 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-08-07 20:15:51.357 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 15(Long)
+2020-08-07 20:15:51.366 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-08-07 20:15:51.367 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-08-07 20:15:51.367 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 23(Long)
+2020-08-07 20:15:51.379 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 2
+2020-08-07 20:15:51.379 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:15:51.380 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 14(Long)
+2020-08-07 20:15:51.388 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:15:51.389 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:15:51.389 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 15(Long)
+2020-08-07 20:15:51.400 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:15:51.401 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-08-07 20:15:51.402 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-08-07 20:15:51.428 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-08-07 20:15:51.429 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-08-07 20:15:51.429 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 15(Long)
+2020-08-07 20:15:51.448 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-08-07 20:15:51.449 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-08-07 20:15:51.449 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 22(Long)
+2020-08-07 20:15:51.461 DEBUG 8672 --- [http-nio-8181-exec-10] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 3
+2020-08-07 20:15:51.461 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:15:51.461 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 14(Long)
+2020-08-07 20:15:51.476 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:15:51.477 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:15:51.478 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 16(Long)
+2020-08-07 20:15:51.486 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:15:51.486 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:15:51.487 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 15(Long)
+2020-08-07 20:15:51.495 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:15:51.496 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.listAll          : ==>  Preparing: select * from t_type 
+2020-08-07 20:15:51.496 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.listAll          : ==> Parameters: 
+2020-08-07 20:15:51.507 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.listAll          : <==      Total: 4
+2020-08-07 20:15:51.964  INFO 8672 --- [http-nio-8181-exec-9] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8181/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-08-07 20:15:51.964 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : ==>  Preparing: select * from t_blog where recommend=1 order by update_time desc limit ? 
+2020-08-07 20:15:51.964 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : ==> Parameters: 3(Integer)
+2020-08-07 20:15:51.986 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : <==      Total: 3
+2020-08-07 20:15:51.987  INFO 8672 --- [http-nio-8181-exec-9] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-08-07 20:15:54.123 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.listAll          : ==>  Preparing: select * from t_type 
+2020-08-07 20:15:54.124 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.listAll          : ==> Parameters: 
+2020-08-07 20:15:54.132 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TypeDAO.listAll          : <==      Total: 4
+2020-08-07 20:15:54.133 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.listAll           : ==>  Preparing: select * from t_tag 
+2020-08-07 20:15:54.133 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.listAll           : ==> Parameters: 
+2020-08-07 20:15:54.144 DEBUG 8672 --- [http-nio-8181-exec-10] com.hk.blog.dao.TagDAO.listAll           : <==      Total: 11
+2020-08-07 20:16:08.143 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_type 
+2020-08-07 20:16:08.143 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll_COUNT    : ==> Parameters: 
+2020-08-07 20:16:08.152 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll_COUNT    : <==      Total: 1
+2020-08-07 20:16:08.152 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll          : ==>  Preparing: select * from t_type LIMIT ? 
+2020-08-07 20:16:08.152 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll          : ==> Parameters: 6(Integer)
+2020-08-07 20:16:08.162 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll          : <==      Total: 4
+2020-08-07 20:16:08.618  INFO 8672 --- [http-nio-8181-exec-9] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8181/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-08-07 20:16:08.618 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : ==>  Preparing: select * from t_blog where recommend=1 order by update_time desc limit ? 
+2020-08-07 20:16:08.619 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : ==> Parameters: 3(Integer)
+2020-08-07 20:16:08.654 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : <==      Total: 3
+2020-08-07 20:16:08.655  INFO 8672 --- [http-nio-8181-exec-9] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-08-07 20:16:08.881 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.listAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_tag 
+2020-08-07 20:16:08.881 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.listAll_COUNT     : ==> Parameters: 
+2020-08-07 20:16:08.890 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.listAll_COUNT     : <==      Total: 1
+2020-08-07 20:16:08.890 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.listAll           : ==>  Preparing: select * from t_tag LIMIT ? 
+2020-08-07 20:16:08.890 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.listAll           : ==> Parameters: 6(Integer)
+2020-08-07 20:16:08.900 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.listAll           : <==      Total: 6
+2020-08-07 20:16:09.314  INFO 8672 --- [http-nio-8181-exec-9] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8181/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-08-07 20:16:09.316 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : ==>  Preparing: select * from t_blog where recommend=1 order by update_time desc limit ? 
+2020-08-07 20:16:09.316 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : ==> Parameters: 3(Integer)
+2020-08-07 20:16:09.347 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : <==      Total: 3
+2020-08-07 20:16:09.348  INFO 8672 --- [http-nio-8181-exec-9] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-08-07 20:16:10.508 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-08-07 20:16:10.508 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.BlogDAO.listAll_COUNT    : ==> Parameters: 
+2020-08-07 20:16:10.517 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.BlogDAO.listAll_COUNT    : <==      Total: 1
+2020-08-07 20:16:10.517 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.BlogDAO.listAll          : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ? 
+2020-08-07 20:16:10.518 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.BlogDAO.listAll          : ==> Parameters: 5(Integer)
+2020-08-07 20:16:10.553 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.BlogDAO.listAll          : <==      Total: 5
+2020-08-07 20:16:10.553 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-08-07 20:16:10.554 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-08-07 20:16:10.566 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-08-07 20:16:10.567 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-08-07 20:16:10.568 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 15(Long)
+2020-08-07 20:16:10.583 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-08-07 20:16:10.584 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-08-07 20:16:10.584 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 25(Long)
+2020-08-07 20:16:10.593 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 1
+2020-08-07 20:16:10.593 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:16:10.594 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 18(Long)
+2020-08-07 20:16:10.602 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:16:10.603 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-08-07 20:16:10.603 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-08-07 20:16:10.614 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-08-07 20:16:10.614 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-08-07 20:16:10.614 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 15(Long)
+2020-08-07 20:16:10.626 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-08-07 20:16:10.627 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-08-07 20:16:10.627 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 26(Long)
+2020-08-07 20:16:10.637 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 1
+2020-08-07 20:16:10.637 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:16:10.638 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 10(Long)
+2020-08-07 20:16:10.661 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:16:10.662 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-08-07 20:16:10.662 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-08-07 20:16:10.673 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-08-07 20:16:10.673 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-08-07 20:16:10.674 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 16(Long)
+2020-08-07 20:16:10.682 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-08-07 20:16:10.683 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-08-07 20:16:10.683 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 24(Long)
+2020-08-07 20:16:10.691 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 1
+2020-08-07 20:16:10.691 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:16:10.692 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 17(Long)
+2020-08-07 20:16:10.704 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:16:10.704 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-08-07 20:16:10.704 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-08-07 20:16:10.714 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-08-07 20:16:10.714 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-08-07 20:16:10.714 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 15(Long)
+2020-08-07 20:16:10.722 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-08-07 20:16:10.723 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-08-07 20:16:10.723 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 23(Long)
+2020-08-07 20:16:10.732 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 2
+2020-08-07 20:16:10.732 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:16:10.732 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 14(Long)
+2020-08-07 20:16:10.743 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:16:10.744 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:16:10.744 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 15(Long)
+2020-08-07 20:16:10.752 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:16:10.753 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==>  Preparing: select * from t_user where id = ? 
+2020-08-07 20:16:10.753 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : ==> Parameters: 1(Long)
+2020-08-07 20:16:10.763 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.UserDAO.findByUserId     : <==      Total: 1
+2020-08-07 20:16:10.763 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==>  Preparing: select * from t_type where id=? 
+2020-08-07 20:16:10.764 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : ==> Parameters: 15(Long)
+2020-08-07 20:16:10.773 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.getOne           : <==      Total: 1
+2020-08-07 20:16:10.774 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==>  Preparing: select * from t_blog_tags where blogs_id=? 
+2020-08-07 20:16:10.774 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : ==> Parameters: 22(Long)
+2020-08-07 20:16:10.784 DEBUG 8672 --- [http-nio-8181-exec-2] c.hk.blog.dao.BlogTagsDAO.getOneByBlog   : <==      Total: 3
+2020-08-07 20:16:10.785 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:16:10.785 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 14(Long)
+2020-08-07 20:16:10.793 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:16:10.794 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:16:10.794 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 16(Long)
+2020-08-07 20:16:10.805 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:16:10.806 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==>  Preparing: select * from t_tag where id=? 
+2020-08-07 20:16:10.806 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : ==> Parameters: 15(Long)
+2020-08-07 20:16:10.815 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.getOne            : <==      Total: 1
+2020-08-07 20:16:10.815 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll          : ==>  Preparing: select * from t_type 
+2020-08-07 20:16:10.815 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll          : ==> Parameters: 
+2020-08-07 20:16:10.823 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll          : <==      Total: 4
+2020-08-07 20:16:11.248  INFO 8672 --- [http-nio-8181-exec-9] com.hk.blog.aspect.LogAspect             : Request : {url='http://localhost:8181/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.hk.blog.controller.IndexController.newblogs', args=[{}]}
+2020-08-07 20:16:11.249 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : ==>  Preparing: select * from t_blog where recommend=1 order by update_time desc limit ? 
+2020-08-07 20:16:11.249 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : ==> Parameters: 3(Integer)
+2020-08-07 20:16:11.279 DEBUG 8672 --- [http-nio-8181-exec-9] com.hk.blog.dao.BlogDAO.findTop          : <==      Total: 3
+2020-08-07 20:16:11.279  INFO 8672 --- [http-nio-8181-exec-9] com.hk.blog.aspect.LogAspect             : Result : _fragments :: newblogList
+2020-08-07 20:16:13.177 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll          : ==>  Preparing: select * from t_type 
+2020-08-07 20:16:13.177 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll          : ==> Parameters: 
+2020-08-07 20:16:13.202 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TypeDAO.listAll          : <==      Total: 4
+2020-08-07 20:16:13.203 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.listAll           : ==>  Preparing: select * from t_tag 
+2020-08-07 20:16:13.204 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.listAll           : ==> Parameters: 
+2020-08-07 20:16:13.213 DEBUG 8672 --- [http-nio-8181-exec-2] com.hk.blog.dao.TagDAO.listAll           : <==      Total: 11
+2020-08-07 20:16:52.300  INFO 13060 --- [main] com.hk.blog.BlogApplicationTests         : Starting BlogApplicationTests on DESKTOP-0EJ1N0L with PID 13060 (started by Mr.Duan in E:\IntelliJ IDEA Dome\blog\blog)
+2020-08-07 20:16:52.301 DEBUG 13060 --- [main] com.hk.blog.BlogApplicationTests         : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-08-07 20:16:52.302  INFO 13060 --- [main] com.hk.blog.BlogApplicationTests         : The following profiles are active: pro
+2020-08-07 20:16:56.120  INFO 13060 --- [main] com.hk.blog.BlogApplicationTests         : Started BlogApplicationTests in 4.403 seconds (JVM running for 5.745)
+2020-08-07 20:16:58.216 DEBUG 13060 --- [main] com.hk.blog.dao.TagDAO.findTop           : ==>  Preparing: select *,count(blogs_id) as size from t_blog_tags join t_tag on t_blog_tags.tags_id=t_tag.id group by tags_id limit ? 
+2020-08-07 20:16:58.245 DEBUG 13060 --- [main] com.hk.blog.dao.TagDAO.findTop           : ==> Parameters: 6(Integer)
+2020-08-07 20:16:58.300 DEBUG 13060 --- [main] com.hk.blog.dao.TagDAO.findTop           : <==      Total: 6
+2020-08-07 20:16:58.352 DEBUG 13060 --- [main] com.hk.blog.dao.BlogDAO.archiveBlog      : ==>  Preparing: select date_format(update_time,'%Y') as year from t_blog group by year order by year desc 
+2020-08-07 20:16:58.353 DEBUG 13060 --- [main] com.hk.blog.dao.BlogDAO.archiveBlog      : ==> Parameters: 
+2020-08-07 20:16:58.363 DEBUG 13060 --- [main] com.hk.blog.dao.BlogDAO.archiveBlog      : <==      Total: 1
+2020-08-07 20:16:58.364 DEBUG 13060 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==>  Preparing: select * from t_blog where date_format(update_time,'%Y')=? 
+2020-08-07 20:16:58.365 DEBUG 13060 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : ==> Parameters: 2020(String)
+2020-08-07 20:16:58.420 DEBUG 13060 --- [main] com.hk.blog.dao.BlogDAO.archiveBlogYear  : <==      Total: 10
+2020-08-07 20:16:58.427 DEBUG 13060 --- [main] com.hk.blog.dao.TypeDAO.findTop          : ==>  Preparing: select type_id as id,typename,count(type_id) as size from t_blog join t_type on t_blog.type_id=t_type.id GROUP BY type_id limit ? 
+2020-08-07 20:16:58.428 DEBUG 13060 --- [main] com.hk.blog.dao.TypeDAO.findTop          : ==> Parameters: 6(Integer)
+2020-08-07 20:16:58.438 DEBUG 13060 --- [main] com.hk.blog.dao.TypeDAO.findTop          : <==      Total: 3
+2020-08-07 20:16:58.495 DEBUG 13060 --- [main] com.hk.blog.dao.TypeDAO.listAll_COUNT    : ==>  Preparing: SELECT count(0) FROM t_type 
+2020-08-07 20:16:58.495 DEBUG 13060 --- [main] com.hk.blog.dao.TypeDAO.listAll_COUNT    : ==> Parameters: 
+2020-08-07 20:16:58.507 DEBUG 13060 --- [main] com.hk.blog.dao.TypeDAO.listAll_COUNT    : <==      Total: 1
+2020-08-07 20:16:58.508 DEBUG 13060 --- [main] com.hk.blog.dao.TypeDAO.listAll          : ==>  Preparing: select * from t_type LIMIT ? 
+2020-08-07 20:16:58.508 DEBUG 13060 --- [main] com.hk.blog.dao.TypeDAO.listAll          : ==> Parameters: 3(Integer)
+2020-08-07 20:16:58.518 DEBUG 13060 --- [main] com.hk.blog.dao.TypeDAO.listAll          : <==      Total: 3
