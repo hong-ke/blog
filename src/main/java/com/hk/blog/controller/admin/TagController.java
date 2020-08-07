@@ -38,7 +38,7 @@ public class TagController {
     @GetMapping("tags")
     public String listpage(Model model,Integer page){
         if (page==null) page=1;
-        PageHelper.startPage(page,3);
+        PageHelper.startPage(page,6);
         List<Tag> types = tagService.listTag();
         PageInfo<Tag> pageInfo = new PageInfo<>(types);
         model.addAttribute("page", pageInfo);

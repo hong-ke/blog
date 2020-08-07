@@ -2,7 +2,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.202.132:3306/blog?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://47.94.96.63:3306/blog?useUnicode=true&characterEncoding=utf-8
     username: root
     password: Admin123!
 mybatis:
@@ -21,5 +21,6 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   pageSizeZero: false #pageSize=0
-
+server:
+  port: 8181
 

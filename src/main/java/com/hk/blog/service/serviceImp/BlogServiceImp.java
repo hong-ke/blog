@@ -116,6 +116,10 @@ public class BlogServiceImp implements BlogService {
             blog.setViews(0);
             blogDAO.saveReId(blog);
         }else {  //修改
+            // 创建时间，浏览次数
+            Blog b = blogDAO.getOne(blog.getId());
+            blog.setCreateTime(b.getCreateTime());
+            blog.setViews(b.getViews());
             blog.setTypeId(blog.getType().getId());  //将type对象的typeId存入数据
             blog.setUpdateTime(new Date());
             blogDAO.update(blog);
