@@ -160,6 +160,7 @@ public class BlogServiceImp implements BlogService {
 
     @Override
     public void deleteBlog(Long id) {
+        blogTagsDAO.delete(id);
         blogDAO.delete(id);
     }
 
